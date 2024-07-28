@@ -102,33 +102,3 @@ function handleSignoutClick() {
         document.getElementById('signout_button').style.visibility = 'hidden';
     }
 }
-
-/**
- * Print the names and majors of students in a sample spreadsheet:
- * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
- */
-/*async function listMajors() {
-    let response;
-    try {
-        // Fetch first 10 files
-        response = await gapi.client.sheets.spreadsheets.values.get({
-            spreadsheetId: '1AND2VJzRKZHl4twqdmV06V58t8yDV_TlaItMqdkSnZ0',
-            range: 'Turnos!A:G',
-        });
-    } catch (err) {
-        console.error(err);
-        return;
-    }
-
-    const range = response.result;
-    if (!range || !range.values || range.values.length == 0) {
-        console.warn("No se encontraron los valores");
-        return;
-    }
-    console.log(range.values);
-    // Flatten to string to display
-    const output = range.values.reduce(
-        (str, row) => `${str}${row[0]}, ${row[4]}\n`,
-        'Name, Major:\n');
-    document.getElementById('content').innerText = output;
-}*/
